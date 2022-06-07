@@ -42,3 +42,21 @@
 // http.createServer(app).listen(app.get('port'), function(){
 //   console.log('Express server listening on port ' + app.get('port'));
 // });
+
+document.querySelector("#sendButton").addEventListener('click',()=>{
+
+    let selectFile = document.querySelector("#inputImage").files[0];
+
+    console.log(selectFile);
+
+  })
+
+  document.querySelector("#sendButton").addEventListener('click',()=>{
+
+    let selectFile = document.querySelector("#inputImage").files[0];
+
+    const file = URL.createObjectURL(selectFile);
+
+    document.querySelector(".uploadImage").src = file;
+
+  })
